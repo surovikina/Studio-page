@@ -1,0 +1,55 @@
+* {
+  border: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+article, aside, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+
+ul,
+h1, h2, h3, h4, h5,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+input,
+textarea,
+button { //prevent outline
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: $black;
+  background-color: $white;
+}
+
+.container {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+%transition {
+  transition: all .3s ease-in;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+
+}

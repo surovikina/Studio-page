@@ -1,0 +1,32 @@
+.works__item {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.works__text-description {
+  margin-top: 25px;
+  font-size: 18px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.works__text-description--mobile {
+  max-height: 70px;
+  overflow: hidden;
+}
+
+.works__link {
+display: block;
+width: 240px;
+padding: 25px 63px;
+margin:0 auto;
+margin-top: 40px;
+font-size: 17px;
+border: 1px solid white;
+border-radius: 32px;
+background-color: $basis;
+color: $white;
+&:hover {
+  background-color: darken($basis, 10%); 
+}
+}

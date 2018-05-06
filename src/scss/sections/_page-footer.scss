@@ -1,0 +1,51 @@
+.page-footer__container {
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.page-footer__contacts {
+  margin-top: 40px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.page-footer__tell,
+.page-footer__mail {
+  color: $black;
+}
+
+.page-footer__bottom {
+  margin-top: 40px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.page-footer__social {
+  display: inline-block;
+  padding: 0 10px;
+  margin-bottom: 25px;
+}
+
+.page-footer__link--instagram {
+  color: $pink;
+  &:hover {
+    color: darken($pink, 10%);
+  }
+}
+
+.page-footer__link--facebook {
+  color: $blue;
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    background-color: $blue;
+    height: 1px;
+    bottom: -10px;
+    left: 0;
+  }
+  &:hover {
+    color: darken($blue, 10%);
+  }
+}
