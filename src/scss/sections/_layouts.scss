@@ -6,7 +6,8 @@
   display: block;
   width: 70%;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 42px;
+  font-size: 17px;
   text-align: center;
   text-transform: uppercase;
   & span {
@@ -19,7 +20,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 45px;
-  padding-bottom: 37px;
+  padding-bottom: 35px;
 }
 
 .layouts__item:last-child {
@@ -27,11 +28,12 @@
 }
 
 .layouts__item {
-  width: calc(50% - 8px);
-  height: 143px;
+  width: 45vw;
+  height: 45vw;
   overflow: hidden;
   margin-bottom: 14px;
   background-color: #b99b9b;
+  cursor: pointer;
 }
 
 .layouts__item--one {
@@ -48,13 +50,13 @@
 
 .layouts__item--three {
   background-image: url('../img/layouts/3.jpg');
-  background-position: center;
+  background-position: left;
   background-size: cover;
 }
 
 .layouts__item--four {
   background-image: url('../img/layouts/4.jpg');
-  background-position: center;
+  background-position: right;
   background-size: cover;
 }
 

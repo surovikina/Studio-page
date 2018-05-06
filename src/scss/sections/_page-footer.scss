@@ -10,13 +10,19 @@
   text-align: center;
 }
 
+.page-footer__name-agency {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
 .page-footer__tell,
 .page-footer__mail {
   color: $black;
 }
 
 .page-footer__bottom {
-  margin-top: 40px;
+  margin-top: 34px;
   margin-bottom: 50px;
   text-align: center;
 }
@@ -24,7 +30,8 @@
 .page-footer__social {
   display: inline-block;
   padding: 0 10px;
-  margin-bottom: 25px;
+  line-height: 22px;
+  margin-bottom: 15px;
 }
 
 .page-footer__link--instagram {
@@ -48,4 +55,7 @@
   &:hover {
     color: darken($blue, 10%);
   }
+}
+.page-footer__copyright {
+  font-size: 13px;
 }
