@@ -61,6 +61,26 @@
     display: inline-block;
     width: auto;
   }
+  //main-nav__dropdown
+  .main-nav__link {
+    position: relative;
+    font-size: 40px;
+    line-height: 72px;
+  }
+  .main-nav__dropdown-container {
+    margin-top: 172px;
+  }
+  .main-nav__language{
+    position: absolute;
+    top: -12px;
+    right: 18px;
+  }
+  .main-nav__language-link {
+    display: block;
+  }
+  .main-nav__home-link {
+    margin-top: 140px;
+  }
 }
 
 @media (min-width: $ipad-width) {
@@ -173,6 +193,24 @@
   .works__item--first {
     height: 25vw;
   }
+  //main-nav__dropdown
+  .main-nav__dropdown {
+    top: 100px;
+  }
+  .main-nav__dropdown-container {
+    margin-top: 10px;
+  }
+  .main-nav__home-link {
+    margin-top: 47px;
+  }
+  .main-nav__language {
+    top: -9px;
+    right: 45px;
+  }
+  .main-nav__language-link {
+    margin: 13px 5px;
+  }
+
 }
 
 @media (min-width: $desktop-width) {

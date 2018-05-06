@@ -22,6 +22,7 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 10px 0;
+  z-index: 100;
 }
 
 .page-header__logo-text {
@@ -90,10 +91,6 @@
   }
 }
 
-.main-nav__dropdown {
-  display: none;
-}
-
 .page-header__info {
   display: flex;
   flex-direction: column;
@@ -126,4 +123,71 @@
   padding-bottom: 97px;
   font-size: 25px;
   line-height: 29px;
+}
+
+.main-nav__dropdown {
+  position: fixed;
+  min-width: 320px;
+  background-color: $white;
+  top: 70px;
+  right: 0;
+  bottom: 0px;
+  left: 0;
+  z-index: 110;
+  overflow-y: auto;
+}
+
+.main-nav__dropdown-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-nav__list {
+  text-align: center;
+}
+
+.main-nav__link {
+  color: $black;
+  font-size: 30px;
+  line-height: 60px;
+  &:hover {
+    color: $basis;
+  }
+}
+
+.main-nav__link--activ::after {
+  content: "";
+  display: block;
+  width: 140%;
+  height: 3px;
+  background: $black;
+  margin-left: -20%;
+}
+
+.main-nav__language-link {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 45px;
+  height: 35px;
+  margin: 16px 4px;
+  font-size: 16px;
+  line-height: 34px;
+  color: $white;
+  background-color: $black;
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid transparent;
+}
+
+.main-nav__language--activ {
+  background-color: $white;
+  border: 2px solid $black;
+  color: $black;
+}
+
+.main-nav__home-link {
+  margin-top: 16px;
+  cursor: pointer;
 }
