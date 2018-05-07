@@ -1,16 +1,28 @@
 .works__item {
   display: block;
+  position: relative;
   margin-bottom: 10px;
   overflow: hidden;
+  @transition @extend;
 }
 
-.works__item--first {
-    height: 53vw;
-    width: auto;
+.works__item--hover-first {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1% 34%;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.works__item:hover .works__item--hover-first {
+  opacity: 1;
 }
 
 .works__text-description {
-  margin-top: 30px;
+  margin-top: 28px;
   font-size: 19px;
   line-height: 30px;
   text-align: center;
@@ -32,7 +44,13 @@ border: 1px solid white;
 border-radius: 50px;
 background-color: $basis;
 color: $white;
+@extend %transition;
 &:hover {
   background-color: darken($basis, 10%);
 }
 }
+
+.works__item--big {
+    height: 53vw;
+   width: auto;
+ }

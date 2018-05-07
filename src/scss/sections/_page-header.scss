@@ -33,12 +33,18 @@
 }
 
 .page-header__logo {
+  position: absolute;
   display: flex;
   align-items: center;
   cursor: pointer;
+  z-index: 1000;
+    @extend %transition;
   &:hover .page-header__logo-text {
     display: inline;
   }
+}
+.page-header__logo:hover .page-header__logo-img {
+  fill: $basis;
 }
 
 .page-header__logo-img {
@@ -49,16 +55,24 @@
   @extend %transition;
 }
 
+
 .main-nav__trigger {
-  display: flex;
-  margin-right: 20px;
-  padding: 15px 0;
+  position: absolute;
+  right: 20px;
+  padding: 12px 0;
   justify-content: center;
   box-sizing: content-box;
   width: 40px;
   height: 20px;
   background-color: transparent;
   user-select: none;
+  z-index: 1000;
+  cursor: pointer;
+  &:hover .main-nav__trigger-button,
+  &:hover .main-nav__trigger-button::before,
+  &:hover .main-nav__trigger-button::after {
+    background-color: $basis;
+  }
 }
 
 .main-nav__trigger span {
@@ -69,6 +83,7 @@
   background-color: $black;
   user-select: none;
   box-shadow: 0px 0px 1px 0px #bbbbbb;
+  @extend %transition;
   &::before{
     content: "";
     position: absolute;
@@ -78,6 +93,7 @@
     height: 3px;
     background-color: $black;
     box-shadow: 0px 0px 1px 0px #888888;
+    @extend %transition;
   }
   &::after {
     content: "";
@@ -88,6 +104,7 @@
     height: 3px;
     background-color: $black;
     box-shadow: 0px 0px 1px 0px #888888;
+    @extend %transition;
   }
 }
 
@@ -127,14 +144,16 @@
 
 .main-nav__dropdown {
   position: fixed;
+  height: 100%;
   min-width: 320px;
-  background-color: $white;
-  top: 70px;
+  top: 0;
   right: 0;
-  bottom: 0px;
+  bottom: 0;
   left: 0;
-  z-index: 110;
   overflow-y: auto;
+  background-color: $white;
+  z-index: 110;
+  transition-duration: .4s;
 }
 
 .main-nav__dropdown-container {
@@ -145,6 +164,7 @@
 }
 
 .main-nav__list {
+  margin-top: 75px;
   text-align: center;
 }
 
@@ -152,6 +172,7 @@
   color: $black;
   font-size: 30px;
   line-height: 60px;
+  @extend %transition;
   &:hover {
     color: $basis;
   }
@@ -190,4 +211,19 @@
 .main-nav__home-link {
   margin-top: 16px;
   cursor: pointer;
+  @extend %transition;
+  &:hover {
+    fill: $basis;
+  }
+}
+
+svg path {
+stroke: inherit;
+stroke-width: inherit;
+fill: inherit;
+}
+
+.page-footer--top-menu {
+  margin-top: 31px;
+  border-top: 1px solid #e9e9ea;
 }
