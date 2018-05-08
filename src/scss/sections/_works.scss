@@ -3,7 +3,6 @@
   position: relative;
   margin-bottom: 10px;
   overflow: hidden;
-  @transition @extend;
 }
 
 .works__item--hover-first {
@@ -15,6 +14,7 @@
   width: 100%;
   height: 100%;
   opacity: 0;
+  transition: all 1s ease-in-out;
 }
 
 .works__item:hover .works__item--hover-first {
@@ -51,6 +51,35 @@ color: $white;
 }
 
 .works__item--big {
-    height: 53vw;
+   height: 53vw;
    width: auto;
  }
+
+ .works__item-img--large {
+   display: none;
+ }
+
+ .works__item--darker{
+  position: relative;
+
+
+}
+.works__item--darker::before {
+  content: '';
+  transition: all 1s ease-in;
+}
+
+ .works__item--darker:hover::before {
+  width: 100%;
+  height: 98%;
+}
+
+.works__item--darker::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
